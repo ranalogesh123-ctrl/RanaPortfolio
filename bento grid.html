@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns:repeat(12,1fr);
+        width: 1200px;
+        height: 500px;
+        gap: 5px;
+      }
+      .child {
+        background-color: blanchedalmond;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .col-span-4 {
+        grid-column: span 4 / span 4;
+      }
+      .col-span-2 {
+        grid-column: span 2 / span 2;
+      }
+      .col-span-3 {
+        grid-column: span 3 / span 3;
+      }
+      .row-span-2 {
+        grid-row: span 2 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child col-span-4"></div>
+      <div class="child col-span-4"></div>
+      <div class="child col-span-2 row-span-2"></div>
+      <div class="child col-span-2"></div>
+      <div class="child col-span-4 row-span-2"></div>
+      <div class="child col-span-3 row-span-2"></div>
+      <div class="child"></div>
+      <div class="child col-span-2"></div>
+      <div class="child col-span-3"></div>
+      <div class="child col-span-2"></div>
+    </div>
+  </body>
+</html>
